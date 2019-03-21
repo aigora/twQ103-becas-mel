@@ -4,7 +4,9 @@ Esta aplicación calculará el importe aproximado de beca que recibe el alumno v
 
 ## Integrantes del equipo
 
-Marina Rodríguez Martínez, Ester Ruiz Puerto y Laura Úbeda Muñoz.
+Marina Rodríguez Martínez, Usuario:marinarx20
+Ester Ruiz Puerto, Usuario:erp6
+Laura Úbeda Muñoz, Usuario:
 
 ## Objetivos del trabajo
 
