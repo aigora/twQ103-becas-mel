@@ -4,7 +4,7 @@ Esta aplicación calculará el importe aproximado de la beca que recibe el alumn
 
 ## Integrantes del equipo
 
-Marina Rodríguez Martínez, Usuario:marinarx20
+Marina Rodríguez Martínez, Usuario:marinarx20\n
 Ester Ruiz Puerto, Usuario:erp6
 Laura Úbeda Muñoz, Usuario:lauraubeda
 
