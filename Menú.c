@@ -1,4 +1,4 @@
-// Autoras: Laura Úbeda, Marina Rodríguez y Ester Ruiz
+// Autoras: Laura Ãšbeda, Marina RodrÃ­guez y Ester Ruiz
 // BECAS MEL
 
 #include<stdio.h>
@@ -14,7 +14,7 @@ int main(){
 		
 		switch(opcion){
 			case 1: printf("Usted ha seleccionado solicitar una beca");break;
-			case 2: printf("Usten ha seleccionado calcular una beca aproximada");break;
+			case 2: printf("Usted ha seleccionado calcular una beca aproximada");break;
 			case 3: printf("Adjuntamos nuestros datos de contacto:");break;
 		}
 		
