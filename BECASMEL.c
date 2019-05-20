@@ -1,4 +1,4 @@
-// Autoras: Laura Úbeda, Marina Rodríguez y Ester Ruiz
+// Autoras: Laura Ãšbeda, Marina RodrÃ­guez y Ester Ruiz
 // BECAS MEL
 
 #include<stdio.h>
