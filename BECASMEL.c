@@ -37,7 +37,7 @@ float uniUmbral1(float distancia, float notamedia);
 float uniUmbral2(float distancia, float notamedia);
 float uniUmbral3(float notamedia);
 
-void main(){
+int main(){
 	int opcion, estudio;
 	datossolicitar bachillerato;
 	datossolicitar universidad;
