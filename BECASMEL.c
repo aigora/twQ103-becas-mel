@@ -5,9 +5,12 @@
 #include<string.h>
 #include<math.h>
 
+//usuario y contraseña para acceder a la administración
 #define USUARIO "admin"
 #define CONTRASENA "56234"
 
+
+// declaración estructuras
 typedef struct
 {
 	char nombre[30];
@@ -30,6 +33,7 @@ struct umbral
 	double intervalo3;
 };
 
+//prototipo funciones
 float bachilleratoUmbral1(float distancia, float notamedia);
 float bachilleratoUmbral2(float distancia, float notamedia);
 float bachilleratoUmbral3(float notamedia);
@@ -37,7 +41,10 @@ float uniUmbral1(float distancia, float notamedia);
 float uniUmbral2(float distancia, float notamedia);
 float uniUmbral3(float notamedia);
 
+
 int main(){
+	
+	// variables
 	int opcion, estudio;
 	datossolicitar bachillerato;
 	datossolicitar universidad;
@@ -56,12 +63,13 @@ int main(){
 		printf("Por favor, selecciona que desea hacer\n");
 		printf("Pulse 1 si quiere solicitar una beca\nPulse 2 para calcular una beca aproximada\nPulse 3 si desea una atencion mas personalizada\nPulse 4 si pertenece a la administracion\nPulse 5 para salir del programa\n");
 		scanf("%i",&opcion);
-		system("cls");
+		system("cls"); 
 		
 		switch(opcion){
 			
 			case 1: printf("Usted ha seleccionado solicitar una beca\n");
 			
+			// comprobación apertura del fichero correcta
 			fsolicitudes = fopen("solicitudes.txt", "a");		
 			if (fsolicitudes == NULL){
 				printf("Error en apertura\n");
@@ -133,8 +141,9 @@ int main(){
 		
 			break;
 			
-			case 2: printf("Usten ha seleccionado calcular una beca aproximada\n");
+			case 2: printf("Usted ha seleccionado calcular una beca aproximada\n");
 			
+				//definición vector estructura
 			struct umbral intervalos[3]={ {1, 3771.00, 13236.00, 14122.00},
 								{2, 7278.00, 22594.00, 24089.00},
 								{3, 10606.00, 30668.00, 32667.00}	};
@@ -169,6 +178,7 @@ int main(){
 							printf("Nota media:\n");
 							scanf("%f", &notamedia);	
 							
+							//invocamos a la función
 							beca = bachilleratoUmbral1(distancia, notamedia);
 						
 							printf("Tu beca tendra un valor aproximado de %.2f euros.\n", beca);
@@ -281,12 +291,14 @@ int main(){
 			break;
 			
 			case 4: do{
+				
 				printf("Introduzca su usuario\n");
 				scanf("%s", &usuario);
 				printf("Introduzca su contrasena\n");
 				scanf("%s", &contrasena);
 				system("cls");
 				
+				//comprobación inicio de sesión correcto
 				comparacionUsuario = strcmp(USUARIO,usuario);
 				comparacionContrasena = strcmp(CONTRASENA, contrasena);
 				
@@ -295,7 +307,7 @@ int main(){
 					}
 			} while(comparacionContrasena != 0 || comparacionUsuario != 0);
 			
-			
+			//comprobación apertura del fichero
 			fsolicitudes = fopen("solicitudes.txt", "r");
 			if(fsolicitudes == NULL){
 				printf("Error abriendo fichero\n");
@@ -303,6 +315,8 @@ int main(){
 			}
 			
 			printf("BECAS SOLICITADAS:\n");
+				
+			//solicitudes bach	
 			while(fread(&bachillerato, sizeof(datossolicitar), 1, fsolicitudes) == 1)
 			{
 				printf("\nNombre: %s\n", bachillerato.nombre);
@@ -316,6 +330,7 @@ int main(){
 				printf("Nota media curso anterior: %d\n\n", bachillerato.notamedia);	
 			}
 			
+			//solicitudes universidad	
 			while(fread(&universidad, sizeof(datossolicitar), 1, fsolicitudes) == 1)
 			{
 				printf("\nNombre: %s\n", universidad.nombre);
@@ -348,6 +363,7 @@ int main(){
 }
 
 
+//implementación de las funciones
 float bachilleratoUmbral1(float distancia, float notamedia) {
 	float resultado;
 	float dis = 0;
