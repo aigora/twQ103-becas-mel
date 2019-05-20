@@ -1,4 +1,4 @@
-// Autoras: Laura Ãšbeda, Marina RodrÃ­guez y Ester Ruiz
+// Autoras: Laura Úbeda, Marina Rodríguez y Ester Ruiz
 // BECAS MEL
 
 #include<stdio.h>
@@ -54,7 +54,7 @@ int main(){
 	do{
 		printf("Bienvenido a BECAS MEL\n");
 		printf("Por favor, selecciona que desea hacer\n");
-		printf("Pulse 1 si quiere solicitar una beca\nPulse 2 para calcular una beca aproximada\nPulse 3 si desea una atencion mas personalizada\nPulse 4 si pertenece a la administracion\n");
+		printf("Pulse 1 si quiere solicitar una beca\nPulse 2 para calcular una beca aproximada\nPulse 3 si desea una atencion mas personalizada\nPulse 4 si pertenece a la administracion\nPulse 5 para salir del programa\n");
 		scanf("%i",&opcion);
 		
 		switch(opcion){
@@ -151,6 +151,11 @@ int main(){
 					
 					for(i=0;i<3;i++)
 					{
+							/*if (numero >= 4){
+								printf("Umbral 1: %.2lf - %.2lf\n", intervalos[i].intervalo1, intervalos[i].intervalo2);
+							printf("Umbral 2: %.2lf - %.2lf\n", intervalos[i].intervalo2, intervalos[i].intervalo3);
+							printf("Umbral 3: desde %.2lf\n", intervalos[i].intervalo3);
+							}*/
 						if(numero==intervalos[i].numero) {
 							printf("Umbral 1: %.2lf - %.2lf\n", intervalos[i].intervalo1, intervalos[i].intervalo2);
 							printf("Umbral 2: %.2lf - %.2lf\n", intervalos[i].intervalo2, intervalos[i].intervalo3);
@@ -328,6 +333,12 @@ int main(){
 			fclose(fsolicitudes);
 		
 			break;
+			
+			case 5:
+				printf("\nQue tenga un buen dia :)\n");
+				return;
+				break;
+			
 			
 			default:
 				printf("ERROR\n");
