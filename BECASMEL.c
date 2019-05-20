@@ -1,4 +1,4 @@
-// Autoras: Laura Úbeda, Marina Rodríguez y Ester Ruiz
+// Autoras: Laura Ãšbeda, Marina RodrÃ­guez y Ester Ruiz
 // BECAS MEL
 
 #include<stdio.h>
@@ -56,6 +56,7 @@ int main(){
 		printf("Por favor, selecciona que desea hacer\n");
 		printf("Pulse 1 si quiere solicitar una beca\nPulse 2 para calcular una beca aproximada\nPulse 3 si desea una atencion mas personalizada\nPulse 4 si pertenece a la administracion\nPulse 5 para salir del programa\n");
 		scanf("%i",&opcion);
+		system("cls");
 		
 		switch(opcion){
 			
@@ -71,6 +72,8 @@ int main(){
 				printf("Por favor, seleccione en que tipo de beca estaria interesado\n");
 				printf(" Pulse 1 si esta cursando bachillerato\n Pulse 2 si se trata de estudios universitarios\n");
 				scanf("%i", &estudio);
+				system("cls");
+				
 				if (estudio == 1){
 					printf("Usted ha seleccionado Bachillerato\n");
 					fflush(stdin);
@@ -140,6 +143,7 @@ int main(){
 				printf("Por favor, seleccione en que tipo de beca estaria interesado\n");
 				printf(" Pulse 1 si esta cursando bachillerato\n Pulse 2 si se trata de estudios universitarios\n");
 				scanf("%i", &estudio);
+				system("cls");
 				
 				if (estudio == 1){
 					printf("Usted ha seleccionado Bachillerato\n");
@@ -287,6 +291,7 @@ int main(){
 				scanf("%s", &usuario);
 				printf("Introduzca su contrasena\n");
 				scanf("%s", &contrasena);
+				system("cls");
 				
 				comparacionUsuario = strcmp(USUARIO,usuario);
 				comparacionContrasena = strcmp(CONTRASENA, contrasena);
