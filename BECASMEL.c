@@ -153,13 +153,7 @@ int main(){
 					do{
 					printf("Por favor, introduce el umbral al que perteneces segun tu renta anual, basandote en los siguientes intervalos:\n");
 					
-					for(i=0;i<3;i++)
-					{
-							/*if (numero >= 4){
-								printf("Umbral 1: %.2lf - %.2lf\n", intervalos[i].intervalo1, intervalos[i].intervalo2);
-							printf("Umbral 2: %.2lf - %.2lf\n", intervalos[i].intervalo2, intervalos[i].intervalo3);
-							printf("Umbral 3: desde %.2lf\n", intervalos[i].intervalo3);
-							}*/
+					for(i=0;i<3;i++){
 						if(numero==intervalos[i].numero) {
 							printf("Umbral 1: %.2lf - %.2lf\n", intervalos[i].intervalo1, intervalos[i].intervalo2);
 							printf("Umbral 2: %.2lf - %.2lf\n", intervalos[i].intervalo2, intervalos[i].intervalo3);
